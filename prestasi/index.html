@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prestasi.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#"><img src="Screenshot_16-11-2024_8336_www.canva.com.jpeg" alt="Logo"></a>
+            </div>
+            <!-- Menu Toggle Button -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/about/index.html">About</a></li>
+                <li><a href="/prestasi/index.html">Prestasi</a></li>
+                <li>
+                    <a href="#">Kesiswaan</a>
+                    <ul class="dropdown">
+                        <li><a href="/ekskul/index.html">Ekstrakurikuler</a></li>
+                        <li><a href="organisasi.html">Organisasi</a></li>
+                    </ul>
+                </li>
+                <li><a href="ppdb.html">Info PPDB</a></li>
+            </ul>
+        </div>
+    </nav> 
+</div>
+</div>
+    <!-- SLIDE SECTION -->
+    <div class="slider-container">
+        <div class="slider">
+            <img src="https://via.placeholder.com/800x400/ff7f7f/333333?text=Gambar+1" alt="Gambar 1">
+            <img src="https://via.placeholder.com/800x400/7f7fff/333333?text=Gambar+2" alt="Gambar 2">
+            <img src="https://via.placeholder.com/800x400/7fff7f/333333?text=Gambar+3" alt="Gambar 3">
+        </div>
+        
+        <button class="arrow arrow-left">&#10094;</button>
+        <button class="arrow arrow-right">&#10095;</button>
+        
+        <div class="dots-container">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+    
+    <script>
+        let currentIndex = 0;
+const images = document.querySelectorAll('.slider img');
+const dots = document.querySelectorAll('.dot');
+const slider = document.querySelector('.slider');
+const totalImages = images.length;
+
+// Fungsi untuk memperbarui tampilan gambar dan titik
+function updateSlider() {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentIndex].classList.add('active');
+}
+
+// Fungsi untuk geser ke kiri
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+    updateSlider();
+}
+
+// Fungsi untuk geser ke kanan
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalImages;
+    updateSlider();
+}
+
+// Event listener untuk tombol panah kiri dan kanan
+document.querySelector('.arrow-left').addEventListener('click', prevSlide);
+document.querySelector('.arrow-right').addEventListener('click', nextSlide);
+
+// Event listener untuk klik pada titik
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider();
+    });
+});
+// Fungsi untuk auto-slide setiap 10 detik
+setInterval(nextSlide, 10000);  // 10000 ms = 10 detik
+
+    </script>
+    <!-- SLIDER END -->
+     <center><div class="prestasi"><b>PRESTASI</b></div></center>
+     <div class="container-prestasi"><section class="isi-prestasi">
+            <ul>
+                <li>Juara 1 Lomba MTQ Pentasi PAI Kota Bogor</li>
+                <li>Juara 2 Lomba MTQ Pentas PAI Kota Bogor</li>
+                <li>Juara 1 Karate Tingkat Kota Bogor</li>
+                <li>Juara 3 Lomba Archery Tingkat Provinsi Jawa Barat</li>
+                <li>Juara 3 Lomba Menggambar STAR Championship</li>
+                <li>Juara 3 Lomba Seven Eight Basketball Tournament</li>
+                <li>Juara 3 Bantalan Panahan Archery Kab.Bogor</li>
+                <li>Juara 3 Turnamen Futsal Zenith</li>
+                <li>Best of The Best National Story Telling</li>
+            </ul>
+        </section></div>
+        <footer>
+            <div class="footer-container">
+                <div class="contact-info">
+                    <h3>SMPIT Al YASMIN</h3>
+                    <p><strong>Alamat:</strong> Jl. Raya Sindang Barang No. 16 Bogor</p>
+                    <p><strong>Email:</strong> <a href="mailto:smpitalyasmin.new@gmail.com">smpitalyasmin.new@gmail.com</a></p>
+                    <p><strong>PPDB:</strong> <a href="#">Informasi PPDB 2024</a></p>
+                    <div class="rounded-social-buttons">
+                        <a class="social-button tiktok" href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209.98397747654576!2d106.75701616090134!3d-6.5760083862163095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c4efb41ce0f9%3A0xdd3b0c2219048444!2sSekolah%20Dasar%20Islam%20Terpadu%20Al%20-%20Yasmin!5e1!3m2!1sid!2sid!4v1732757220315!5m2!1sid!2sid"
+                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </footer>
+        <script>
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+        document.getElementById('nav-list').classList.toggle('nav-active');
+        });
+        </script>
+        <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+    </body>
+    </html>

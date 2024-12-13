@@ -1,0 +1,350 @@
+.navbar {
+    background: white;
+    height: 55px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo a img {
+    width: 170px;
+    height: 55px;
+}
+
+nav ul li a:after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 0;
+}
+
+nav ul li a:hover:after {
+    width: 96.7%;
+    left: 2%;
+    background: rgba(0, 123, 255, 0.7);
+
+}
+
+/* Navbar List */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background: white;
+    padding: 0 0 0;
+    margin-left: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.dropdown li {
+    padding: 10px 10px 10px;
+    margin-left: 0px;
+}
+
+.dropdown li a {
+    padding: 10px 10px;
+}
+
+.dropdown li:hover {
+    background: rgba(100, 100, 100, 0.226);
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+    transition: 500ms;
+}
+
+/* Menu Toggle (Hamburger) for Small Screens */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    cursor: pointer;
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    /* Hide the navbar items initially */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul li {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li:hover .dropdown {
+        position: relative;
+        display: block;
+    }
+
+    /* Show the menu toggle button */
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* When the menu is toggled */
+.nav-active {
+    display: flex !important;
+}
+
+.about {
+    background-image: url(gambarsekolah1.jpg);
+    background-size: 100%;
+}
+
+h2 {
+    text-align: center;
+    color: aqua;
+    text-shadow: 0 0 10px cyan;
+}
+
+.visi-misi {
+    background-color: rgba(0, 110, 255, 0.523);
+    border-radius: 20px;
+    margin: auto;
+    width: 80%;
+    height: auto;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    padding: 2%;
+}
+
+.visi {
+    text-align: center;
+}
+
+.misi {
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.misi li {
+    margin-top: 3%;
+}
+
+.section {
+    margin: 10px 0;
+}
+
+.section-header {
+    background-color: #f0f0f087;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.section-content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #ffffff3c;
+}
+
+footer {
+    background-color: #c8c8c8;
+    display: flex;
+    justify-content: space-between; /* Memindahkan konten ke kiri dan iframe ke kanan */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border-top: 2px solid #ddd;
+}
+
+.footer-container {
+    display: flex;
+    align-items: flex-start; /* Menyelaraskan item di bagian atas */
+    width: 100%; /* Pastikan lebar penuh */
+}
+
+.contact-info {
+    text-align: left; /* Teks di sebelah kiri */
+    flex: 1; /* Membiarkan konten ini mengambil ruang yang tersedia */
+}
+
+.contact-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.map-container {
+    flex: 1; /* Membiarkan konten ini mengambil ruang yang tersedia */
+    display: flex; /* Menggunakan flexbox untuk mengatur iframe */
+    justify-content: flex-end; /* Mengatur iframe ke kanan */
+}
+
+iframe {
+    width: 100%; /* Lebar 100% untuk responsif */
+    max-width: 400px; /* Maksimal lebar iframe */
+    height: 200px; /* Tinggi iframe */
+    border: 0; /* Menghilangkan border */
+}
+
+@charset "UTF-8";
+
+.svg-inline--fa {
+  vertical-align: -0.200em;
+}
+
+.rounded-social-buttons {
+    margin-left: 3%;
+    margin-top: 4%;
+}
+
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-tiktok, .fa-youtube, .fa-instagram {
+  font-size: 25px;
+}
+
+.rounded-social-buttons .social-button.tiktok {
+  background: #000000;
+}
+
+.rounded-social-buttons .social-button.tiktok:hover, .rounded-social-buttons .social-button.tiktok:focus {
+  color: #000000;
+  background: #fefefe;
+  border-color: #000000;
+}
+
+.rounded-social-buttons .social-button.youtube {
+  background: #bb0000;
+}
+
+.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
+  color: #bb0000;
+  background: #fefefe;
+  border-color: #bb0000;
+}
+
+.rounded-social-buttons .social-button.instagram {
+  background: #ff00f2;
+}
+
+.rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
+  color: #ff00f2;
+  background: #fefefe;
+  border-color: #ff00f2;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Mengubah arah menjadi kolom pada layar kecil */
+        align-items: center; /* Menyelaraskan item di tengah */
+    }
+
+    .map-container {
+        margin-top: 20px; /* Tambahkan margin atas untuk jarak */
+        justify-content: center; /* Pusatkan iframe */
+    }
+
+    iframe {
+        max-width: 100%; /* Lebar maksimal 100% pada layar kecil */
+        height: 150px; /* Tinggi iframe lebih kecil pada layar kecil */
+    }
+}

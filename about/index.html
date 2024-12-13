@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFIL SMPIT AL YASMIN</title>
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#"><img src="Screenshot_16-11-2024_8336_www.canva.com.jpeg" alt="Logo"></a>
+            </div>
+            <!-- Menu Toggle Button -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/about/index.html">About</a></li>
+                <li><a href="/prestasi/index.html">Prestasi</a></li>
+                <li>
+                    <a href="#">Kesiswaan</a>
+                    <ul class="dropdown">
+                        <li><a href="/ekskul/index.html">Ekstrakurikuler</a></li>
+                        <li><a href="organisasi.html">Organisasi</a></li>
+                    </ul>
+                </li>
+                <li><a href="ppdb.html">Info PPDB</a></li>
+            </ul>
+        </div>
+    </nav> 
+</div>
+</div>
+    <div class="about" class="container-about">
+        <!-- visi -->
+        <div class="visi-misi">
+            <div class="visi">
+                <h2>Visi</h2>
+                <ul>
+                <p>Terbentuknya Generasi Islam Yang Unggul, Berwawasan Keilmuan dan Berakhlakul Karimah</p>
+                </ul>
+
+            <!-- misi -->
+            <div class="misi">
+                <h2>Misi</h2>
+                <ul>
+                    <li>Menanamkan Kecintaan Kepada Allah & Rasul-Nya sesuai Akidah Islam yang Benar.</li>
+                    <li>Menyelenggarakan kegiatan berkualitas, menumbuhkan semangat keunggulan dan budaya berprestasi
+                    sesuai potensi siswa. </li>
+                    <li>Mengembangkan kurikulum sekolah yang berwawasan IMTAQ dan IPTEK.</li>
+                    <li>Mewujudkan dan mengembamgkan sumber daya manusia Indonesia yang berkualitas. </li>
+                    <li>Menanamkan nilai nilai Islam dalam proses pembelajaran dan perilaku sehari-hari sesuai dengan
+                    teladan Rasulullah SAW.</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+
+
+        <!-- staff -->
+        <div class="staff">
+            <div class="section">
+                <div class="section-header" onclick="toggleSection('pimpinan')">Pimpinan</div>
+                <div class="section-content" id="pimpinan">
+                    <p>Syaiful Rahman - Kepala Sekolah</p>
+                    <p>Euis Handayani - Waka Kurikulum</p>
+                    <p>Devi Yuliana - Waka Kesiswaan</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-header" onclick="toggleSection('guru')">Guru</div>
+                <div class="section-content" id="guru">
+                    <p>Pak Didi - PJOK, SBK</p>
+                    <p>Bu Rinha - IPS,SKI</p>
+                    <p>Bu Lia - IPA</p>
+                    <p>Bu Euis - MTK</p>
+                    <p>Bu Ajeng - B.Indo, SBK</p>
+                    <p>Bu Devi - B.Inggris, Qurdist</p>
+                    <p>Pak Yadi - Informatika, B.Sunda</p>
+                    <p>Pak Rifai - BTQ</p>
+                    <p>Pak Ujang - PPKn, Akidah Akhlak</p>
+                    <p>Pak Hasan - Fikih, BTQ</p>
+                    <p>Pak Amal - BTQ, B.Arab</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>SMPIT Al YASMIN</h3>
+                <p><strong>Alamat:</strong> Jl. Raya Sindang Barang No. 16 Bogor</p>
+                <p><strong>Email:</strong> <a href="mailto:smpitalyasmin.new@gmail.com">smpitalyasmin.new@gmail.com</a></p>
+                <p><strong>PPDB:</strong> <a href="#">Informasi PPDB 2024</a></p>
+                <div class="rounded-social-buttons">
+                    <a class="social-button tiktok" href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209.98397747654576!2d106.75701616090134!3d-6.5760083862163095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c4efb41ce0f9%3A0xdd3b0c2219048444!2sSekolah%20Dasar%20Islam%20Terpadu%20Al%20-%20Yasmin!5e1!3m2!1sid!2sid!4v1732757220315!5m2!1sid!2sid"
+                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleSection(sectionId) { var content = document.getElementById(sectionId); if (content.style.display === "none" || content.style.display === "") { content.style.display = "block"; } else { content.style.display = "none"; } }
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.getElementById('nav-list').classList.toggle('nav-active');
+    });
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
